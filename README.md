@@ -3,7 +3,7 @@ You can always adjust the filters of take out the **-Recurse**  parameter
 
 ``` Javascript
 $CountInFile  = @()
- $files       = Get-ChildItem -File -Recurse -Include ('*.ps1', '*.csv')
+$files        = Get-ChildItem -File -Recurse -Include ('*.ps1', '*.csv')
  foreach ($file in $files) {
     $fileCount    = (get-content $file.FullName).count
     $CountInFile += $fileCount
